@@ -34,8 +34,8 @@
     <el-row :gutter="20" class="content-main-row-placeholder">
   <el-col :span="20"><div class="grid-content bg-purple"></div></el-col>
 </el-row>
-    <el-row>
-      <el-col :span="11" class="content-el-col">
+    <el-row v-for="(blog,index) in blogs" v-if="index<1" :key="blog.name">
+      <el-col :span="11" class="content-el-col" v-show="showBlog0">
         <div class="grid-content bg-purple-dark">
           <div class="content-container-main-div">
             <div class="content-container-main-div-info">{{blogs[0].content}}</div>
@@ -46,7 +46,6 @@
               <div class="content-container-main-div-time">{{blogs[0].created}}</div>
             </div>
           </div>
-          <el-divider class="content-main-div-divider"></el-divider>
         </div>
       </el-col>
       <el-col :span="2">
@@ -56,7 +55,7 @@
         </div>
         </div>
       </el-col>
-      <el-col :span="11" class="content-el-col">
+      <el-col :span="11" class="content-el-col" v-show="showBlog1">
         <div class="grid-content bg-purple-dark">
           <div class="content-container-main-div">
             <div class="content-container-main-div-info">{{blogs[1].content}}</div>
@@ -67,12 +66,23 @@
               <div class="content-container-main-div-time">{{blogs[1].created}}</div>
             </div>
           </div>
-          <el-divider class="content-main-div-divider"></el-divider>
         </div>
       </el-col>
     </el-row>
-    <!-- <el-row>
-      <el-col :span="11" class="content-el-col">
+    <el-row v-show="showDivider1">
+              <el-col :span="11" class="content-el-col">
+                <div class="grid-content bg-purple">
+                  <el-divider class="content-main-div-divider"></el-divider>
+                </div>
+              </el-col>
+              <el-col :span="11" :offset="2" class="content-el-col">
+                <div class="grid-content bg-purple">
+                  <el-divider class="content-main-div-divider"></el-divider>
+                </div>
+              </el-col>
+            </el-row>
+    <el-row v-for="(blog,index) in blogs" v-if="index<1" :key="blog.name">
+      <el-col :span="11" class="content-el-col" v-show="showBlog2">
         <div class="grid-content bg-purple-dark">
           <div class="content-container-main-div">
             <div class="content-container-main-div-info">{{blogs[2].content}}</div>
@@ -83,7 +93,6 @@
               <div class="content-container-main-div-time">{{blogs[2].created}}</div>
             </div>
           </div>
-          <el-divider class="content-main-div-divider"></el-divider>
         </div>
       </el-col>
       <el-col :span="2">
@@ -93,7 +102,7 @@
         </div>
         </div>
       </el-col>
-      <el-col :span="11" class="content-el-col">
+      <el-col :span="11" class="content-el-col" v-show="showBlog3">
         <div class="grid-content bg-purple-dark">
           <div class="content-container-main-div">
             <div class="content-container-main-div-info">{{blogs[3].content}}</div>
@@ -104,12 +113,23 @@
               <div class="content-container-main-div-time">{{blogs[3].created}}</div>
             </div>
           </div>
-          <el-divider class="content-main-div-divider"></el-divider>
         </div>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col :span="11" class="content-el-col">
+    <el-row v-show="showDivider2">
+              <el-col :span="11" class="content-el-col">
+                <div class="grid-content bg-purple">
+                  <el-divider class="content-main-div-divider"></el-divider>
+                </div>
+              </el-col>
+              <el-col :span="11" :offset="2" class="content-el-col">
+                <div class="grid-content bg-purple">
+                  <el-divider class="content-main-div-divider"></el-divider>
+                </div>
+              </el-col>
+            </el-row>
+    <el-row v-for="(blog,index) in blogs" v-if="index<1" :key="blog.name">
+      <el-col :span="11" class="content-el-col" v-show="showBlog4">
         <div class="grid-content bg-purple-dark">
           <div class="content-container-main-div">
             <div class="content-container-main-div-info">{{blogs[4].content}}</div>
@@ -120,7 +140,6 @@
               <div class="content-container-main-div-time">{{blogs[4].created}}</div>
             </div>
           </div>
-          <el-divider class="content-main-div-divider"></el-divider>
         </div>
       </el-col>
       <el-col :span="2">
@@ -130,7 +149,7 @@
         </div>
         </div>
       </el-col>
-      <el-col :span="11" class="content-el-col">
+      <el-col :span="11" class="content-el-col" v-show="showBlog5">
         <div class="grid-content bg-purple-dark">
           <div class="content-container-main-div">
             <div class="content-container-main-div-info">{{blogs[5].content}}</div>
@@ -141,12 +160,23 @@
               <div class="content-container-main-div-time">{{blogs[5].created}}</div>
             </div>
           </div>
-          <el-divider class="content-main-div-divider"></el-divider>
         </div>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col :span="11" class="content-el-col">
+    <el-row v-show="showDivider3">
+              <el-col :span="11" class="content-el-col">
+                <div class="grid-content bg-purple">
+                  <el-divider class="content-main-div-divider"></el-divider>
+                </div>
+              </el-col>
+              <el-col :span="11" :offset="2" class="content-el-col">
+                <div class="grid-content bg-purple">
+                  <el-divider class="content-main-div-divider"></el-divider>
+                </div>
+              </el-col>
+            </el-row>
+    <el-row v-for="(blog,index) in blogs" v-if="index<1" :key="blog.name">
+      <el-col :span="11" class="content-el-col" v-show="showBlog6">
         <div class="grid-content bg-purple-dark">
           <div class="content-container-main-div">
             <div class="content-container-main-div-info">{{blogs[6].content}}</div>
@@ -157,7 +187,6 @@
               <div class="content-container-main-div-time">{{blogs[6].created}}</div>
             </div>
           </div>
-          <el-divider class="content-main-div-divider"></el-divider>
         </div>
       </el-col>
       <el-col :span="2">
@@ -167,7 +196,7 @@
         </div>
         </div>
       </el-col>
-      <el-col :span="11" class="content-el-col">
+      <el-col :span="11" class="content-el-col" v-show="showBlog7">
         <div class="grid-content bg-purple-dark">
           <div class="content-container-main-div">
             <div class="content-container-main-div-info">{{blogs[7].content}}</div>
@@ -178,12 +207,23 @@
               <div class="content-container-main-div-time">{{blogs[7].created}}</div>
             </div>
           </div>
-          <el-divider class="content-main-div-divider"></el-divider>
         </div>
       </el-col>
     </el-row>
-    <el-row>
-      <el-col :span="11" class="content-el-col">
+    <el-row v-show="showDivider4">
+              <el-col :span="11" class="content-el-col">
+                <div class="grid-content bg-purple">
+                  <el-divider class="content-main-div-divider"></el-divider>
+                </div>
+              </el-col>
+              <el-col :span="11" :offset="2" class="content-el-col">
+                <div class="grid-content bg-purple">
+                  <el-divider class="content-main-div-divider"></el-divider>
+                </div>
+              </el-col>
+            </el-row>
+    <el-row v-for="(blog,index) in blogs" v-if="index<1" :key="blog.name">
+      <el-col :span="11" class="content-el-col" v-show="showBlog8">
         <div class="grid-content bg-purple-dark">
           <div class="content-container-main-div">
             <div class="content-container-main-div-info">{{blogs[8].content}}</div>
@@ -203,7 +243,7 @@
         </div>
         </div>
       </el-col>
-      <el-col :span="11" class="content-el-col">
+      <el-col :span="11" class="content-el-col" v-show="showBlog9">
         <div class="grid-content bg-purple-dark">
           <div class="content-container-main-div">
             <div class="content-container-main-div-info">{{blogs[9].content}}</div>
@@ -216,7 +256,7 @@
           </div>
         </div>
       </el-col>
-    </el-row> -->
+    </el-row>
   </el-main>
    <el-aside id="content-container-aside-right"></el-aside>
 </el-container>
@@ -233,7 +273,21 @@ export default {
       blogs: {},
       currentPage: 1,
       total: 0,
-      pageSize: 5
+      pageSize: 5,
+      showBlog9: true,
+      showBlog8: true,
+      showBlog7: true,
+      showBlog6: true,
+      showBlog5: true,
+      showBlog4: true,
+      showBlog3: true,
+      showBlog2: true,
+      showBlog1: true,
+      showBlog0: true,
+      showDivider1: true,
+      showDivider2: true,
+      showDivider3: true,
+      showDivider4: true
     }
   },
   methods: {
@@ -245,7 +299,35 @@ export default {
         _this.currentPage = res.data.data.current
         _this.total = res.data.data.total
         _this.pageSize = res.data.data.size
+        this.showBlog9 = this.returnShowBlog(_this.blogs[9].content)
+        this.showBlog8 = this.returnShowBlog(_this.blogs[8].content)
+        this.showBlog7 = this.returnShowBlog(_this.blogs[7].content)
+        this.showBlog6 = this.returnShowBlog(_this.blogs[6].content)
+        this.showBlog5 = this.returnShowBlog(_this.blogs[5].content)
+        this.showBlog4 = this.returnShowBlog(_this.blogs[4].content)
+        this.showBlog3 = this.returnShowBlog(_this.blogs[3].content)
+        this.showBlog2 = this.returnShowBlog(_this.blogs[2].content)
+        this.showBlog1 = this.returnShowBlog(_this.blogs[1].content)
+        this.showBlog0 = this.returnShowBlog(_this.blogs[0].content)
+        this.showDivider4 = this.returnShowDivider(_this.blogs[9].content, _this.blogs[8].content)
+        this.showDivider3 = this.returnShowDivider(_this.blogs[7].content, _this.blogs[6].content)
+        this.showDivider2 = this.returnShowDivider(_this.blogs[5].content, _this.blogs[4].content)
+        this.showDivider1 = this.returnShowDivider(_this.blogs[3].content, _this.blogs[2].content)
       })
+    },
+    returnShowBlog (param) {
+      if (param == null) {
+        return false
+      } else {
+        return true
+      }
+    },
+    returnShowDivider (param1, param2) {
+      if (param1 == null || param2 == null) {
+        return false
+      } else {
+        return true
+      }
     }
   },
   created () {

@@ -155,8 +155,7 @@ export default {
     }
   },
   created () {
-    console.log('1111: ' + this.$store.getters.getUser.username)
-    if (this.$store.getters.getUser.username) {
+    if (this.$store.getters.getUser) {
       this.headerLodingfirst = false
       this.headerLodingtwo = true
     } else {

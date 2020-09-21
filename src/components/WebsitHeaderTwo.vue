@@ -1,3 +1,4 @@
+<!--注册等其他页面顶部导航条-->
 <template>
   <div class="w-websitHeaderTwo">
     <el-row :gutter="20">

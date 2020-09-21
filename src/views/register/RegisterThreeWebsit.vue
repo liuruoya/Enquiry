@@ -65,8 +65,8 @@
 </template>
 
 <script>
-import WebsitHeaderTwo from '../components/WebsitHeaderTwo'
-import Footer from '../components/Footer'
+import WebsitHeaderTwo from '../../components/WebsitHeaderTwo'
+import Footer from '../../components/Footer'
 export default {
   name: '',
   components: { Footer, WebsitHeaderTwo },
@@ -162,7 +162,7 @@ export default {
 
 .content-container-main .registerImg1{
   display: inline-block;
-  background-image:url('../../static/img/register3.png');
+  background-image:url('../../../static/img/register3.png');
   background-repeat: no-repeat;
   width: 112px;
   height: 27px;
@@ -174,7 +174,7 @@ export default {
 }
 .content-container-main .registerImg2{
   display: inline-block;
-  background-image:url('../../static/img/register4.png');
+  background-image:url('../../../static/img/register4.png');
   background-repeat: no-repeat;
   width: 99px;
   height: 27px;

@@ -358,8 +358,8 @@
 </template>
 
 <script>
-import WebsitHeaderFirst from '../components/WebsitHeaderFirst'
-import Footer from '../components/Footer'
+import WebsitHeaderFirst from '../../components/WebsitHeaderFirst'
+import Footer from '../../components/Footer'
 export default {
   name: 'purchaserAgentWeb',
   components: { WebsitHeaderFirst, Footer },
@@ -436,7 +436,7 @@ export default {
 </script>
 <style scoped>
 .purchaserAgentWeb-header {
-  background-image: url("../../static/img/headtop.png");
+  background-image: url("../../../static/img/headtop.png");
   background-repeat: no-repeat;
   color: #ffffff;
   height: 480px !important;

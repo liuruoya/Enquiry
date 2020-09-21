@@ -1,3 +1,4 @@
+<!--首页顶部导航栏组件-->
 <template>
   <div class="h-header">
     <el-row :gutter="20">
@@ -31,7 +32,7 @@
               <a href="https://www.ele.me" target="_blank" id="header-el-menu-a-3">询价公告</a>
             </el-menu-item>
             <el-menu-item index="4">
-              <a href="https://www.ele.me" target="_blank" id="header-el-menu-a-4">中标通知</a>
+              <a href="./notificationOfAward" target="_blank" id="header-el-menu-a-4">中标通知</a>
             </el-menu-item>
             <el-menu-item index="5">
               <a href="https://www.ele.me" target="_blank" id="header-el-menu-a-5">帮助中心</a>

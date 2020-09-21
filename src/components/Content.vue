@@ -1,4 +1,4 @@
-<!--  -->
+<!--询价公告页面-->
 <template>
   <div class="content" id="c-content">
     <el-container>
@@ -399,7 +399,7 @@ export default {
 }
 .content-container-main-div-info{
   font-size: 16px;
-  font-weight: 400px;
+  font-weight: 400;
   margin-top: 12px;
 }
 .content-container-main-div-time{

@@ -2,11 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
-import PurchaserAgentWebsit from '../views/PurchaserAgentWebsit.vue'
-import RegisterFirstWebsit from '../views/RegisterFirstWebsit.vue'
-import RegisterTwoWebsit from '../views/RegisterTwoWebsit.vue'
-import RegisterThreeWebsit from '../views/RegisterThreeWebsit.vue'
-import PurchaserAgentManage from '../views/PurchaserAgentManage.vue'
+import PurchaserAgentWebsit from '../views/weblink/PurchaserAgentWebsit.vue'
+import RegisterFirstWebsit from '../views/register/RegisterFirstWebsit.vue'
+import RegisterTwoWebsit from '../views/register/RegisterTwoWebsit.vue'
+import RegisterThreeWebsit from '../views/register/RegisterThreeWebsit.vue'
+import PurchaserAgentManage from '../views/weblink/PurchaserAgentManage.vue'
 
 Vue.use(Router)
 
@@ -19,12 +19,12 @@ export default new Router({
       redirect: {name: 'Home'}
     },
     {
-      path: '/Home',
+      path: '/home',
       name: 'Home',
       component: Home
     },
     {
-      path: '/Login',
+      path: '/login',
       name: 'Login',
       component: Login
     },
@@ -55,6 +55,11 @@ export default new Router({
       path: '/PurchaserAgentManage',
       name: 'PurchaserAgentManage',
       component: PurchaserAgentManage
+    },
+    {
+      path: '/notificationOfAward',
+      name: 'NotificationOfAward',
+      component: () => import('../views/weblink/NotificationOfAward')
     }
   ]
 })

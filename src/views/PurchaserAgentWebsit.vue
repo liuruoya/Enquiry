@@ -389,7 +389,7 @@ export default {
   methods: {
     page (currentPage) {
       const _this = this
-      _this.$axios.get('http://localhost:8081/blogs?currentPage=' + currentPage).then(res => {
+      _this.$axios.get('/blogs?currentPage=' + currentPage).then(res => {
         console.log(res)
         _this.blogs = res.data.data.records
         _this.currentPage = res.data.data.current
@@ -510,7 +510,7 @@ export default {
 }
 .purchaserAgentWeb-container-main-div-info {
   font-size: 16px;
-  font-weight: 400px;
+  font-weight: 400;
   margin-top: 15px;
 }
 .purchaserAgentWeb-container-main-div-time {

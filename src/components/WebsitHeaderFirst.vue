@@ -50,10 +50,20 @@
       </el-col>
       <el-col :span="2" class="header-el-col" v-show="headerLodingtwo">
         <!-- <div class="grid-content bg-purple" id="header-right-info"> -->
-        <div class="block" id="header-right-info">
+        <div class="block" id="header-right-info1">
           <div id="header-col-purchaser-first"><el-avatar :size="30" :src="purchaserAgentUrl" id="header-el-avatar-purchaser"></el-avatar></div>
-          <div id="header-col-purchaser-two">采购商</div>
-          <div id="header-col-purchaser-three"><el-image :src="headerDown" @click="logout()"></el-image></div>
+          <div id="header-col-purchaser-two"></div>
+          <div id="header-col-purchaser-three">
+            <el-dropdown trigger="click" @command="handleCommand">
+              <span class="el-dropdown-link">
+                采购商<i class="el-icon-arrow-down el-icon--right"></i>
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item command="setting">设置</el-dropdown-item>
+                <el-dropdown-item command="logout">退出登录</el-dropdown-item>
+              </el-dropdown-menu >
+            </el-dropdown>
+          </div>
         </div>
         <!-- </div> -->
       </el-col>
@@ -140,6 +150,17 @@ export default {
     },
     register () {
       this.$router.push('/RegisterFirstWebsit')
+    },
+    handleCommand (command) {
+      if (!command) {
+        this.$message('click on item ' + command)
+        return
+      }
+      switch (command) {
+        case 'logout' :
+          this.logout()
+          break
+      }
     },
     logout () {
       const _this = this
@@ -293,6 +314,11 @@ a {
   text-align: center;
   /* line-height: 40px; */
 }
+#header-right-info1 {
+  margin-top: 8px;
+  text-align: center;
+  /* line-height: 40px; */
+}
 #header-welcome {
   color: #ffffff;
   font-size: 32px;
@@ -336,5 +362,15 @@ a {
 #header-col-purchaser-three{
   display: inline-block;
   vertical-align:middle;
+  margin-top: 5px;
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+.el-icon-arrow-down {
+  font-size: 12px;
 }
 </style>

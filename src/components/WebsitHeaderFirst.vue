@@ -89,17 +89,15 @@
                 id="header-input-keyword"
                 v-model="ruleForm.name"
                 placeholder="请输入关键字"
-                style="width:420px;"
-                clearable
-              ></el-input>
-            </el-form-item>
-            <el-form-item id="header-search">
-              <el-button
-                type="warning"
-                icon="el-icon-search"
-                @click="submitForm('ruleForm')"
-                id="header-button-search"
-              >搜索</el-button>
+                style="width:500px;"
+                clearable>
+                <el-button
+                  slot="append"
+                  type="warning"
+                  icon="el-icon-search"
+                  @click="submitForm('ruleForm')">
+                  搜索</el-button>
+              </el-input>
             </el-form-item>
           </el-form>
         </div>
@@ -186,8 +184,18 @@ export default {
     }
   }
 }
-
 </script>
+
+<style rel="stylesheet/scss">
+  /*.el-button el-button--warning{*/
+  /*  */
+  /*}*/
+  .el-input-group__append{
+    background-color: #E6A23C;
+    -webkit-text-fill-color:white;
+  }
+</style>
+
 <style scoped>
 .h-header {
   margin-top: 25px;
@@ -345,9 +353,9 @@ a {
 /* >>> .el-input__inner{
     height: 50px;
  } */
-#header-search {
-  margin-left: -5px;
-}
+/*#header-search {*/
+/*  margin-left: -5px;*/
+/*}*/
 #header-col-purchaser-first{
   display: inline-block;
   vertical-align:middle;

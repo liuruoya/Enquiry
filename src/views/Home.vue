@@ -11,7 +11,7 @@
 <script>
 import WebsitHeaderFirst from '../components/WebsitHeaderFirst'
 import Footer from '../components/Footer'
-import Content from '../components/Content'
+import Content from '../components/Content_HomeList'
 export default {
   name: 'Home',
   components: { WebsitHeaderFirst, Footer, Content },

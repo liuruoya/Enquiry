@@ -1,21 +1,33 @@
 <template>
   <div class="loginBody">
-    <div class="content">
-      <div class="left">
-        <h2>
-          河北建投新能源
-          <br />询比价平台
-        </h2>
-        <ul>
-          <li>价格一目了然</li>
-          <li>订单全程追踪</li>
-          <li>网上便携操作</li>
-        </ul>
+    <div class="logo" >
+      <div style="float: left">
+      <img src="../../static/img/logo.png"
+           style="margin-top: 86px;
+            margin-left: 87px;
+            width: 69px;
+            height: 69px;">
       </div>
+      <div style="float: left;margin-top: 88px;margin-left: 16px">
+        <div style="font-size: 36px;
+        font-family: STLiti, STLiti-Regular;
+        font-weight: 400;
+        text-align: left;
+        color: #ffffff;
+        letter-spacing: -2px;">
+          河北建投新能源有限公司</div>
+        <div style="font-size: 24px;
+        font-family: Athelas, Athelas-Bold;
+        text-align: left;
+        color: #ffffff;
+        letter-spacing: 3px;">
+          HCIG New-energy-Co.,Ltd.</div>
+      </div>
+    </div>
+    <div class="content">
       <div class="right">
         <div class="pic">
-          <img src='../../static/img/headimg.png' />
-          <p>欢迎登录</p>
+          <p class="welcome">欢迎登录询比价平台</p>
         </div>
         <!--右侧表单详情-->
         <el-form
@@ -35,7 +47,7 @@
               @blur="checkUsername()"
             >
               <i slot="prefix">
-                <img src='../../static/img/user.png' style="margin-top: 5px" />
+                <img src='../../static/img/user.png' style="margin-top: 10px" />
               </i>
             </el-input>
           </el-form-item>
@@ -51,12 +63,12 @@
               @blur="checkPwd()"
             >
               <i slot="prefix">
-                <img src='../../static/img/pwd.png' style="margin-top: 5px" />
+                <img src='../../static/img/pwd.png' style="margin-top: 10px" />
               </i>
               <i slot="suffix">
                 <img
                   src='../../static/img/closeeye.png'
-                  style="margin-top:14px;margin-right:8px"
+                  style="margin-top:19px;margin-right:8px"
                 />
               </i>
             </el-input>
@@ -144,13 +156,14 @@ export default {
 .el-input__inner {
   text-indent: 12px;
   tab-size: 16px;
+  height: 55px;
 }
 </style>
 
 <style scoped>
 .btnreg {
   overflow: hidden;
-  margin-top: 12px;
+  margin-top: 19px;
   font-size: 14px;
 }
 .box1 {
@@ -162,11 +175,11 @@ export default {
   color: #0096c3;
 }
 #login-register{
-  color: #0096C3;
+  color: #ffffff;
   margin-top: -6px;
 }
 .btn-login {
-  width: 311px;
+  width: 380px;
   height: 45px;
   background: #0096c3;
   border-radius: 4px;
@@ -175,12 +188,12 @@ export default {
 .find_pwd {
   text-align: left;
   tab-size: 14px;
-  color: #666666;
+  color: #ffffff;
   float: left;
 }
 .autobox {
   float: right;
-  color: #666666;
+  color: #ffffff;
 }
 
 /**
@@ -191,48 +204,25 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 597px;
-  background: url('../../static/img/pic_bgform.png');
-}
-.left {
-  width: 390px;
-  height: 100%;
-  float: left;
-  /*1111111background: url("../assets/img/login/loginleft.png");*/
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  border-radius: 4px 0px 0px 4px;
-}
-.left h2 {
-  margin-top: 72px;
-  padding-left: 51px;
-  height: 50px;
-  font-size: 34px;
-  font-family: Microsoft YaHei;
-  font-weight: normal;
-  color: #ffffff;
-  opacity: 1;
-}
-.left ul {
-  padding-top: 39px;
-  padding-left: 69px;
-}
-.left ul li {
-  height: 30px;
-  line-height: 30px;
-  color: #fff;
-  font-size: 20px;
-  text-align: left;
-  margin-top: 32px;
+  height: 504px;
+  background: url('../../static/img/formbg1.png');
 }
 .right {
-  width: 564px;
+  width: 576px;
   height: 100%;
-  float: right;
-  /*background-color: #FFFFFF;*/
   text-align: center;
 }
 .right .pic {
-  height: 130px;
+  margin-top: 54px;
+}
+.right .welcome{
+  font-size: 36px;
+  font-family: Microsoft YaHei, Microsoft YaHei-Bold;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 3px 3px 0px rgba(0,0,0,0.16);
+
 }
 .right .pic img {
   margin-top: 66px;
@@ -244,21 +234,21 @@ export default {
   height: 26px;
   font-size: 20px;
   font-family: Microsoft YaHei;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 26px;
-  color: #7da5c9;
+  color: #ffffff;
   opacity: 1;
 }
 .login-form {
-  width: 311px;
+  width: 380px;
   height: 45px;
-  background: #ffffff;
+  /*background: #ffffff;*/
   border-radius: 4px;
   position: relative;
   left: 0;
   right: 0;
   max-width: 100%;
-  margin: 20% auto 28%;
+  margin: 13% auto 28%;
 }
 .el-input__inner {
   margin-left: 12px;
@@ -266,7 +256,7 @@ export default {
 
 /* 背景 */
 .loginBody {
-  background: url('../../static/img/bg.png') no-repeat top center;
+  background: url('../../static/img/bg2.png') no-repeat top center;
   background-size: 100% 100%;
   height: 100%;
   position: fixed;

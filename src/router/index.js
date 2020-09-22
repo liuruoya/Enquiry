@@ -60,6 +60,16 @@ export default new Router({
       path: '/notificationOfAward',
       name: 'NotificationOfAward',
       component: () => import('../views/weblink/NotificationOfAward')
+    },
+    {
+      path: '/changePwd',
+      name: 'ChangePwd',
+      component: () => import('../views/register/ChangePwd')
+    },
+    {
+      path: '/changePwdComplete',
+      name: 'ChangePwdComplete',
+      component: () => import('../views/register/ChangePwdComplete')
     }
   ]
 })

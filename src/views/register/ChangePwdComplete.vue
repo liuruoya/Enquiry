@@ -3,9 +3,9 @@
 </template>
 
 <script>
-  export default {
-    name: 'ChangePwdComplete'
-  }
+export default {
+  name: 'ChangePwdComplete'
+}
 </script>
 
 <style scoped>

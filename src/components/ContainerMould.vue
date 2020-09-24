@@ -1,25 +1,22 @@
 <template>
-<div class="container" :style="{minHeight :minHeight +'px'}">
-<!--  container容器 -->
-  <el-container>
-<!--  头部-->
-    <el-header class="header"><WebsitHeaderTwo></WebsitHeaderTwo></el-header>
-<!-- 主内容-->
-    <el-main class="main">
-
-    </el-main>
-<!-- 尾部-->
-    <el-footer class="footer"><Footer></Footer></el-footer>
-  </el-container>
-</div>
+  <div class="container" :style="{minHeight :minHeight +'px'}">
+    <!--  container容器 -->
+    <el-container>
+      <!--  头部-->
+      <el-header class="header"><WebsitHeaderTwo></WebsitHeaderTwo></el-header>
+      <!-- 主内容-->
+      <el-main class="main"></el-main>
+      <!-- 尾部-->
+      <el-footer class="footer"><Footer></Footer></el-footer>
+    </el-container>
+  </div>
 </template>
 
 <script>
 import Footer from '../../components/Footer'
 import WebsitHeaderTwo from '../../components/WebsitHeaderTwo'
-
 export default {
-  name: 'ChangePwd',
+  name: 'ContainerMoudle',
   components: { Footer, WebsitHeaderTwo },
   data () {
     return {
@@ -55,5 +52,4 @@ export default {
     text-align: center;
     height: 190px !important;
   }
-
 </style>

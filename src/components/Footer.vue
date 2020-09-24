@@ -113,7 +113,7 @@ export default {
 background-color: #9ba0a3;
 margin-top: 10px;
 margin-bottom: 0px;
-padding: 0 auto;
+padding: 0 ;
 }
 /* #footer-adress {
   color: #9ba0a3;
@@ -125,9 +125,9 @@ padding: 0 auto;
 .el-row {
   margin-bottom: 10px;
   /* padding-left: 340px; */
-  &:last-child {
-    margin-bottom: 0;
-  }
+  /*&:last-child {*/
+  /*  margin-bottom: 0;*/
+  /*}*/
 }
 .el-col {
   border-radius: 4px;

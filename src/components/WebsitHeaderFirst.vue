@@ -60,8 +60,9 @@
                 采购商<i class="el-icon-arrow-down el-icon--right"></i>
               </span>
               <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item command="setting">设置</el-dropdown-item>
-                <el-dropdown-item command="logout">退出登录</el-dropdown-item>
+                <el-dropdown-item icon="el-icon-user" command="changeUser">切换用户</el-dropdown-item>
+                <el-dropdown-item command="changePwd" >修改密码</el-dropdown-item>
+                <el-dropdown-item command="logout" >退出登录</el-dropdown-item>
               </el-dropdown-menu >
             </el-dropdown>
           </div>
@@ -159,6 +160,9 @@ export default {
         case 'logout' :
           this.logout()
           break
+        case 'changePwd':
+          this.changePwd()
+          break
       }
     },
     logout () {
@@ -172,6 +176,10 @@ export default {
         _this.$store.commit('REMOVE_INFO')
         _this.$router.push('/login')
       })
+    },
+    changePwd () {
+      const _this = this
+      _this.$router.push('/changePwd')
     }
   },
   created () {

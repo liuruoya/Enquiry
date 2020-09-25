@@ -116,7 +116,7 @@ export default {
       activeIndex2: '1',
       // activeName: 'second',
       circleUrl: '../../static/img/logo.png',
-      purchaserAgentUrl: '../../static/img/purchaserAgentHead3.png',
+      purchaserAgentUrl: '../../static/img/purchaserAgentHead6.jpg',
       headerDown: '../../static/img/icon_down.png',
       ruleForm: {
         name: ''
@@ -211,6 +211,7 @@ export default {
 }
 .header-el-avatar {
   /* margin-top: 8px; */
+  background-color: #0050A4;
   height: 40px;
   width: 40px;
 }

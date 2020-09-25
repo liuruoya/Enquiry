@@ -7,6 +7,7 @@ import RegisterFirstWebsit from '../views/register/RegisterFirstWebsit.vue'
 import RegisterTwoWebsit from '../views/register/RegisterTwoWebsit.vue'
 import RegisterThreeWebsit from '../views/register/RegisterThreeWebsit.vue'
 import PurchaserAgentManage from '../views/weblink/PurchaserAgentManage.vue'
+import FindPasswordWebsit from '../views/findpass/FindPasswordWebsit.vue'
 
 Vue.use(Router)
 
@@ -24,7 +25,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/login',
+      path: '/Login',
       name: 'Login',
       component: Login
     },
@@ -70,6 +71,11 @@ export default new Router({
       path: '/changePwdComplete',
       name: 'ChangePwdComplete',
       component: () => import('../views/register/ChangePwdComplete')
+    },
+    {
+      path: '/findPasswordWebsit',
+      name: 'findPasswordWebsit',
+      component: FindPasswordWebsit
     }
   ]
 })

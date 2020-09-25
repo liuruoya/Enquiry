@@ -30,38 +30,34 @@
           <p class="welcome">欢迎登录询比价平台</p>
         </div>
         <!--右侧表单详情-->
-        <el-form
-          ref="loginForm"
-          :model="loginForm"
-          class="login-form"
-          auto-complete="off"
-          label-position="left"
-        >
-          <el-form-item prop="username" class="username">
-            <el-input
-              v-model="loginForm.username"
-              name="username"
-              type="text"
-              auto-complete="off"
-              placeholder="请输入用户名"
-              @blur="checkUsername()"
-            >
+        <el-form ref="loginForm"
+                 :model="loginForm"
+                 class="login-form"
+                 auto-complete="off"
+                 label-position="left">
+          <el-form-item prop="username"
+                        class="username">
+            <el-input v-model="loginForm.username"
+                      name="username"
+                      type="text"
+                      auto-complete="off"
+                      placeholder="请输入用户名"
+                      @blur="checkUsername()">
               <i slot="prefix">
                 <img src='../../static/img/user.png' style="margin-top: 10px" />
               </i>
             </el-input>
           </el-form-item>
           <!--输入密码框-->
-          <el-form-item prop="password" class="password">
-            <el-input
-              type="password"
-              v-model="loginForm.password"
-              name="password"
-              auto-complete="off"
-              placeholder="请输入密码"
-              @keyup.enter.native="handleLogin"
-              @blur="checkPwd()"
-            >
+          <el-form-item prop="password"
+                        class="password">
+            <el-input type="password"
+                      v-model="loginForm.password"
+                      name="password"
+                      auto-complete="off"
+                      placeholder="请输入密码"
+                      @keyup.enter.native="handleLogin"
+                      @blur="checkPwd()">
               <i slot="prefix">
                 <img src='../../static/img/pwd.png' style="margin-top: 10px" />
               </i>
@@ -75,24 +71,25 @@
           </el-form-item>
           <!-- 忘记密码-->
           <div>
-            <div class="find_pwd" @click="forgetPwd">忘记密码?</div>
+            <div class="find_pwd"
+                 @click="forgetPwd">忘记密码?</div>
             <div class="autobox">
               <input type="checkbox" />七天自动登录
             </div>
           </div>
           <!--登录按钮-->
-          <el-button
-            :loading="loading"
-            type="primary"
-            class="btn-login"
-            @click.native.prevent="submitForm('loginForm')"
-          >登&nbsp;&nbsp;&nbsp;&nbsp;录</el-button>
+          <el-button :loading="loading"
+                     type="primary"
+                     class="btn-login"
+                     @click.native.prevent="submitForm('loginForm')">登&nbsp;&nbsp;&nbsp;&nbsp;录</el-button>
           <!--注册-->
           <div class="btnreg">
             <div class="box1">还没有账号?</div>
             <div class="box2">
-              <el-link :underline="false" href="./RegisterFirstWebsit" id="login-register">立即注册</el-link>
-              </div>
+              <el-link :underline="false"
+                       href="./RegisterFirstWebsit"
+                       id="login-register">立即注册</el-link>
+            </div>
           </div>
         </el-form>
       </div>
@@ -144,9 +141,9 @@ export default {
         }
       })
     },
-    forgetPwd () {},
-    checkUsername () {},
-    checkPwd () {}
+    forgetPwd () { },
+    checkUsername () { },
+    checkPwd () { }
   }
 }
 </script>

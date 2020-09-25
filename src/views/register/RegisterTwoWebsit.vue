@@ -141,7 +141,8 @@ export default {
 .registerTwoWebsit-websitHeaderTwo {
   height: 80px !important;
   text-align: center;
-  background-color: transparent;
+  background-color: #0096C3;
+  color: #ffffff;
 }
 .registerTwoWebsit-footer {
     background-color: #384248;

@@ -68,8 +68,8 @@ export default {
       activeIndex: '1',
       activeIndex2: '1',
       // activeName: 'second',
-      circleUrl: '../../static/img/logo2.png',
-      purchaserAgentUrl: '../../static/img/purchaserAgentHead.png',
+      circleUrl: '../../static/img/logo.png',
+      purchaserAgentUrl: '../../static/img/purchaserAgentHead6.jpg',
       headerDown: '../../static/img/icon_down.png',
       ruleForm: {
         name: ''
@@ -137,7 +137,7 @@ export default {
 
 .websitHeaderTwo-el-avatar {
   /* margin-top: 8px; */
-  background-color: #ffffff;
+  background-color: #0096C3;
   height: 40px;
   width: 40px;
 }
@@ -149,14 +149,15 @@ export default {
   padding-right: 0px !important;
 }
 #websitHeaderTwo-buttion-login {
-  background-color: #0096c3;
+  background-color: #ffffff;
+  color:#0096c3;
   font-size: 14px;
   font-family: Microsoft YaHei;
 }
 #websitHeaderTwo-buttion-registered {
   background-color: transparent;
-  color: #666666;
-  border-color: #666666;
+  /* color: #666666;*/
+  border-color: #ffffff;
   font-size: 14px;
   margin-left: 5px;
   font-family: Microsoft YaHei;
@@ -174,7 +175,6 @@ export default {
   height: 40px;
   line-height: 40px;
   font-size: 22px;
-  color: #333333;
   font-weight: bold;
 }
 /* 导航栏背景颜色设置 */
@@ -193,7 +193,7 @@ export default {
   margin-left: 27px;
   border-bottom-color: transparent !important;
   font-weight: bolder;
-  color: #333333;
+  color: #ffffff;
   text-align: center;
   font-size: 16px;
   font-weight: bold;
@@ -201,6 +201,7 @@ export default {
 /* 选择时的背景颜色 */
 .el-menu-item.is-active {
   background-color: transparent !important;
+  color: #ffffff;
 }
 /* //设置鼠标悬停时el-menu-item的样式 */
 .el-menu-item:hover {
@@ -251,7 +252,6 @@ a {
   height: 40px;
   line-height: 40px;
   font-size: 14px;
-  color: #666666;
   font-weight: 400;
   text-align: left;
   margin-left: -20px;
@@ -277,5 +277,9 @@ a {
 #websitHeaderTwo-col-purchaser-three{
   display: inline-block;
   vertical-align:middle;
+}
+#websitHeaderTwo-el-avatar-purchaser{
+    height: 30px;
+    width: 30px;
 }
 </style>

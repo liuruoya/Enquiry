@@ -10,9 +10,11 @@ import axios from 'axios'
 import 'element-ui/lib/theme-chalk/index.css'
 import './axios'
 import './permission'
+axios.defaults.withCredentials = true
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios
+// Vue.prototype.$axios.defaults.withCredentials = true
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

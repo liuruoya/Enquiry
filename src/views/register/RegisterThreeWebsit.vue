@@ -90,7 +90,8 @@ export default {
 .registerThreeWebsit-websitHeaderTwo {
   height: 80px !important;
   text-align: center;
-  background-color: transparent;
+  background-color: #0096C3;
+  color: #ffffff;
 }
 .registerThreeWebsit-footer {
     background-color: #384248;

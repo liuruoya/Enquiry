@@ -5,7 +5,16 @@
       <!--  头部-->
       <el-header class="header"><WebsitHeaderTwo></WebsitHeaderTwo></el-header>
       <!-- 主内容-->
-      <el-main class="main"></el-main>
+      <el-main class="main">
+        <el-container>
+          <!-- 内容左侧边-->
+          <el-aside class="left"></el-aside>
+          <el-main class="content-main">
+          </el-main>
+          <!-- 内容右侧边-->
+          <el-aside class="right"></el-aside>
+        </el-container>
+      </el-main>
       <!-- 尾部-->
       <el-footer class="footer"><Footer></Footer></el-footer>
     </el-container>
@@ -40,9 +49,11 @@ export default {
     width: 100%;
   }
   .header{
+    height: 80px !important;
     width: 100%;
     text-align: center;
-    background-color: transparent;
+    background-color: #0096C3;
+    color: #ffffff;
   }
   .main{
     flex: 1

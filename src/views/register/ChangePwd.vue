@@ -6,7 +6,7 @@
     <el-header class="header"><WebsitHeaderTwo></WebsitHeaderTwo></el-header>
 <!-- 主内容-->
     <el-main class="main">
-      <el-container>
+      <el-container id="elcontainer">
 <!-- 内容左侧边-->
         <el-aside class="left"></el-aside>
         <el-main class="content-main">
@@ -143,6 +143,7 @@ export default {
     position: fixed;
     display: flex;
     width: 100%;
+    height: 100%;
   }
   .header{
     height: 80px !important;
@@ -153,13 +154,14 @@ export default {
   }
   .main{
     flex: 1;
+    padding: 0;
+    background-color: #f7f9fc;
   }
   .footer{
     background-color: #384248;
     text-align: center;
     height: 190px !important;
   }
-
   .left {
     width: 535px !important;
     /* height: 600px !important; */
@@ -170,11 +172,16 @@ export default {
     /* height: 600px !important; */
     background-color: #f7f9fc;
   }
+  #elcontainer{
+    min-height: 100%;
+    background-color: #f7f9fc;
+  }
   .content-main {
     background-color: #ffffff;
-    padding-top: 30px;
     border-radius: 8px;
-    height: 770px;
+    height: 650px;
+    margin-top: 50px;
+    padding-top: 30px;
     box-shadow: 0px 0px 10px 0px rgba(0, 17, 59, 0.05);
   }
   .image {
@@ -191,7 +198,7 @@ export default {
     margin-top: 10px;
   }
   .divider-first {
-    width: 124px;
+    width: 135px;
     min-height: 2px;
     background-color: #0096c3;
     overflow: hidden;

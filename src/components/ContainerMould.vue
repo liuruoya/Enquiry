@@ -6,7 +6,7 @@
       <el-header class="header"><WebsitHeaderTwo></WebsitHeaderTwo></el-header>
       <!-- 主内容-->
       <el-main class="main">
-        <el-container>
+        <el-container id="elcontainer">
           <!-- 内容左侧边-->
           <el-aside class="left"></el-aside>
           <el-main class="content-main">
@@ -43,11 +43,14 @@ export default {
 </script>
 
 <style scoped>
+  /*整体容器组件*/
   .container{
     position: fixed;
     display: flex;
     width: 100%;
+    height: 100%;
   }
+  /*头部*/
   .header{
     height: 80px !important;
     width: 100%;
@@ -55,12 +58,22 @@ export default {
     background-color: #0096C3;
     color: #ffffff;
   }
+  /*中间部分*/
   .main{
-    flex: 1
+    flex: 1;
+    padding: 0;
+    background-color: #f7f9fc;
   }
+  /*尾部*/
   .footer{
     background-color: #384248;
     text-align: center;
     height: 190px !important;
   }
+  /*main中间部分容器子容器*/
+  #elcontainer{
+    min-height: 100%;
+    background-color: #f7f9fc;
+  }
+
 </style>

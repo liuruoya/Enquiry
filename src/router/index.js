@@ -76,6 +76,45 @@ export default new Router({
       path: '/findPasswordWebsit',
       name: 'findPasswordWebsit',
       component: FindPasswordWebsit
+    },
+    {
+      path: '/helpCenter',
+      name: 'HelpCenter',
+      component: () => import('../views/weblink/HelpCenter')
+    },
+    {
+      path: '/helpDetails',
+      name: 'HelpDetails',
+      component: () => import('../views/weblink/HelpDetails')
+    },
+    {
+      path: '/biddingDetails',
+      name: 'BiddingDetails',
+      component: () => import('../views/weblink/BiddingDetails')
+    },
+    {
+      path: '/biddingDetails2',
+      name: 'BiddingDetails2',
+      component: () => import('../views/weblink/BiddingDetailsForSupplier')
+    },
+    {
+      path: '/biddingNotice',
+      name: 'BiddingNotice',
+      component: () => import('../views/weblink/BiddingNotice')
+    },
+    {
+      path: '/inquiryList',
+      name: 'InquiryList',
+      component: () => import('../views/weblink/InquiryList')
+    },
+    {
+      path: '/inquiryDetails',
+      name: 'InquiryDetails',
+      component: () => import('../views/weblink/InquiryDetails')
+    },
+    {
+      path: '/page',
+      component: () => import('../components/PageModelTest')
     }
   ]
 })

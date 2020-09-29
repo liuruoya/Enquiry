@@ -98,6 +98,7 @@ export default {
   }
 
   #item-normal .item-date p {
+    height: 16px;
     margin: 8px 0;
   }
 
@@ -118,10 +119,10 @@ export default {
   #item-normal .count-div {
     float: right;
     margin-top: 35px;
-    padding: 10px;
+    padding: 8px;
     text-align: center;
     width: 92px;
-    height: 26px;
+    height: 20px;
     background: #f7f9fc;
     border-radius: 4px;
   }

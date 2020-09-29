@@ -20,11 +20,15 @@
             <el-col :span="5" style="margin-left: 0px">联系人：{{ filmData.contacts }}</el-col>
             <el-col :span="4" style="margin-left: -15px">联系方式：{{ filmData.telephone }}</el-col>
           </el-row>
-          <el-row>备注：{{ filmData.note }}</el-row>
+          <el-row>备<span style="margin-left: 2em">注：</span>{{ filmData.note }}</el-row>
           <el-row class="el-row-download">上传附件：
-            <i class="el-icon-link" style=""></i>
-            <span type="primary" @click="handleDownload">
-                        {{ filmData.film }}
+            <el-image :src="icon_film" class="icon">
+              <div slot="error" class="image-slot">
+                <i class="el-icon-picture-outline"></i>
+              </div>
+            </el-image>
+            <span @click="handleDownload">
+            <el-link>{{ filmData.film }}</el-link>
                       </span>
           </el-row>
         </el-row>
@@ -77,6 +81,7 @@ export default {
   data () {
     return {
       icon_search: '@/../static/img/icon_search.png',
+      icon_film: '@/../static/img/icon_film.png',
       tableData: [],
       filmData: {},
       time: {
@@ -185,7 +190,13 @@ export default {
     margin: 25px 0;
   }
 
-  #inquiry-data .el-row-download span {
+  #inquiry-data .el-row-download .icon {
+    width: 16px;
+    height: 18px;
+    display: inline-flex;
+  }
+
+  #inquiry-data .el-row-download .el-link {
     border: 1px solid rgba(0, 0, 0, 0);
     font-size: 14px;
     font-family: Microsoft YaHei, Microsoft YaHei-Regular;

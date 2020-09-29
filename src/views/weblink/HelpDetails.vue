@@ -17,9 +17,13 @@
           <p>{{helpData.content}}</p>
         </el-row>
         <el-row class="download">
-          <i class="el-icon-link" style=""></i>
-          <span type="primary" @click="handleDownload">
-                        {{ helpData.name }}
+          <el-image :src="icon_film" class="icon">
+            <div slot="error" class="image-slot">
+              <i class="el-icon-picture-outline"></i>
+            </div>
+          </el-image>
+          <span @click="handleDownload">
+            <el-link>{{ helpData.name }}</el-link>
                       </span>
         </el-row>
       </el-main>
@@ -38,6 +42,7 @@ export default {
   data () {
     return {
       icon_help: '@/../static/img/icon_help.png',
+      icon_film: '@/../static/img/icon_film.png',
       helpData: {}
     }
   },
@@ -105,7 +110,14 @@ export default {
     margin-left: 2em;
   }
 
-  #main-content .download span{
+  #main-content .download .icon {
+    margin-left: 2em;
+    width: 16px;
+    height: 18px;
+    display: inline-flex;
+  }
+
+  #main-content .download .el-link{
     border: 1px solid rgba(0,0,0,0);
     font-size: 14px;
     font-family: Microsoft YaHei, Microsoft YaHei-Regular;

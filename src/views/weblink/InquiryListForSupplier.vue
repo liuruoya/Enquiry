@@ -99,6 +99,7 @@ export default {
   }
 
   #item-normal .item-date p {
+    height: 16px;
     margin: 8px 0;
   }
 

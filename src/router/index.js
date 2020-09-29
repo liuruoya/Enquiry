@@ -88,33 +88,34 @@ export default new Router({
       component: () => import('../views/weblink/HelpDetails')
     },
     {
+      path: '/biddingNotice',
+      name: 'BiddingNotice',
+      component: () => import('../views/weblink/BiddingNotice')
+    },
+    {
       path: '/biddingDetails',
       name: 'BiddingDetails',
       component: () => import('../views/weblink/BiddingDetails')
     },
     {
       path: '/biddingDetails2',
-      name: 'BiddingDetails2',
+      name: 'BiddingDetailsForSupplier',
       component: () => import('../views/weblink/BiddingDetailsForSupplier')
     },
     {
-      path: '/biddingNotice',
-      name: 'BiddingNotice',
-      component: () => import('../views/weblink/BiddingNotice')
+      path: '/inquiryList',
+      name: 'InquiryListForSupplier',
+      component: () => import('../views/weblink/InquiryListForSupplier')
     },
     {
-      path: '/inquiryList',
-      name: 'InquiryList',
-      component: () => import('../views/weblink/InquiryList')
+      path: '/inquiryList2',
+      name: 'InquiryListForBuyer',
+      component: () => import('../views/weblink/InquiryListForBuyer')
     },
     {
       path: '/inquiryDetails',
       name: 'InquiryDetails',
       component: () => import('../views/weblink/InquiryDetails')
-    },
-    {
-      path: '/page',
-      component: () => import('../components/PageModelTest')
     }
   ]
 })

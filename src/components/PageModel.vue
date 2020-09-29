@@ -118,13 +118,13 @@ export default {
   }
 
   #registerFirstWebsit-aside-left {
-    width: 370px !important;
+    width: 350px !important;
     /* height: 600px !important; */
     background-color: #f7f9fc;
   }
 
   #registerFirstWebsit-aside-right {
-    width: 370px !important;
+    width: 350px !important;
     /* height: 600px !important; */
     background-color: #f7f9fc;
   }

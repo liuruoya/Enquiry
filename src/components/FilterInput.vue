@@ -19,7 +19,6 @@ export default {
   methods: {
     doFilter () {
       this.$emit('filter', this.inputFilter)
-      //alert('f'+this.inputFilter)
     }
   }
 }
@@ -31,13 +30,13 @@ export default {
     height: 35px;
     background: #ffffff;
     border: 1px solid #dfe1e6;
-    /*border-radius: 8px;*/
+    border-radius: 8px 0 0 8px;
   }
 
   #filter-input .el-input-group__append {
-    width: 66px;
+    width: 62px;
     margin: 0;
-    /*height: 35px;*/
+    height: 33px;
     background: #0096c3;
     border-radius: 0px 8px 8px 0px;
   }
@@ -45,8 +44,6 @@ export default {
 
 <style scoped>
   #filter-input .el-input-group__append .el-button {
-    /*width: 35px;
-    height: 21px;*/
     font-size: 16px;
     font-family: Microsoft YaHei, Microsoft YaHei-Regular;
     font-weight: 400;
@@ -58,7 +55,5 @@ export default {
   #filter-input {
     width: 274px;
     height: 35px;
-    /*margin-top: -10px;*/
-    /*margin-right: 15px;*/
   }
 </style>

@@ -43,7 +43,7 @@ export default {
   mounted () {
     this.minHeight = document.documentElement.clientHeight - 0
     const that = this
-    window.onresize = function() {
+    window.onresize = function () {
       that.minHeight = document.documentElement.clientHeight - 0
     }
   }

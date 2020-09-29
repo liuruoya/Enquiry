@@ -1,19 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../views/Home.vue'
-import Login from '../views/Login.vue'
 import PurchaserAgentWebsit from '../views/weblink/PurchaserAgentWebsit.vue'
 import RegisterFirstWebsit from '../views/register/RegisterFirstWebsit.vue'
 import RegisterTwoWebsit from '../views/register/RegisterTwoWebsit.vue'
 import RegisterThreeWebsit from '../views/register/RegisterThreeWebsit.vue'
 import PurchaserAgentManage from '../views/weblink/PurchaserAgentManage.vue'
 import FindPasswordWebsit from '../views/findpass/FindPasswordWebsit.vue'
+import test from './comn'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   routes: [
+    ...test,
     {
       path: '/',
       name: 'Index',
@@ -23,11 +24,6 @@ export default new Router({
       path: '/home',
       name: 'Home',
       component: Home
-    },
-    {
-      path: '/Login',
-      name: 'Login',
-      component: Login
     },
     {
       path: '/RegisterFirstWebsit',

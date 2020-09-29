@@ -108,7 +108,8 @@ export default {
     var endDate = filmData.end
     if (endDate !== '') {
       var startTime = new Date()
-      var endTime = Date.parse(endDate) //将日期时间转换为毫秒值
+      var endTime = Date.parse(endDate)
+      /* 将日期时间转换为毫秒值 */
       var days = Math.floor((endTime - startTime) / 3600000 / 24 + 1)
       var hours = Math.floor((endTime - startTime - (days - 1) * 24 * 3600000) / 3600000)
       if (days > 0) {

@@ -221,6 +221,7 @@ export default {
   }
   .btnNext .el-button{
     background-color: #0096c3;
+    /*#c1c1c1*/
     width: 104px;
     height: 38px;
   }

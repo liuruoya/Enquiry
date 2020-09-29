@@ -1,26 +1,26 @@
 <!--帮助中心页面-->
 <template>
-  <PageModel :icon-src="icon_help" title-name="帮助中心">
+  <PageModel :icon-src="icon_help" title-name="帮助中心" footer="true">
     <FilterInput slot="head-right" @filter="doFilter"></FilterInput>
-    <div id="help-table-div">
-      <el-table :data="tableData" id="help-table"
+    <div id="table-div">
+      <el-table :data="tableData" id="help-table" width="1100"
                 :show-header="false"><!--隐藏表头-->
         <el-table-column prop="date" label="类型" width="40px">
           <template slot-scope="scope">
             <el-image :src="icon_w" v-if="scope.row.type=='word'">
-              <div slot="placeholder" class="image-slot" >
+              <div slot="placeholder" class="image-slot">
                 word<span class="dot">...</span>
               </div>
             </el-image>
             <el-image :src="icon_p" v-if="scope.row.type=='pdf'">
-              <div slot="placeholder" class="image-slot" >
+              <div slot="placeholder" class="image-slot">
                 pdf<span class="dot">...</span>
               </div>
             </el-image>
           </template>
         </el-table-column>
-        <el-table-column prop="name" label="名称" style="margin-left: -5px"></el-table-column>
-        <el-table-column label="操作" width="130" fixed="right">
+        <el-table-column prop="name" label="名称"></el-table-column>
+        <el-table-column label="操作" width="110" fixed="right">
           <template slot-scope="scope">
             <el-button type="primary" plain size="mini" class="table-el-button"
                        @click="handleShow(scope.$index, scope.row)">查看
@@ -32,28 +32,27 @@
         </el-table-column>
       </el-table>
     </div>
-
-    <el-row style="margin: 30px 0">
+    <el-row slot="footer" id="foot-page">
       <Page :total="pager.total" :limit="pager.limit" @changePage="getPage"></Page>
     </el-row>
   </PageModel>
 </template>
 
 <script>
-import PageModel from '../../components/PageModel'
-import Page from '../../components/Page'
-import FilterInput from '../../components/FilterInput'
+import PageModel from '@/components/PagesModel'
+import Page from '@/components/Page'
+import FilterInput from '@/components/FilterInput'
 // 测试用数据
-import datatable from '../../../static/data/helpcenter.json'
+import datatable from '@/../static/data/helpcenter.json'
 
 export default {
   name: 'HelpCenter',
   components: { PageModel, Page, FilterInput },
   data () {
     return {
-      icon_help: '../../static/img/icon_help.png',
-      icon_p: '../../static/img/icon_p.png',
-      icon_w: '../../static/img/icon_w.png',
+      icon_help: '@/../static/img/icon_help.png',
+      icon_p: '@/../static/img/icon_p.png',
+      icon_w: '@/../static/img/icon_w.png',
       inputFilter: '',
       tableData: [],
       pager: {
@@ -69,12 +68,13 @@ export default {
       this.pager.page = 1
       this.inputFilter = inputFilter
       this.getTableData(this.inputFilter, 1, this.pager.limit)
+      alert('搜索:' + inputFilter)
     },
     handleShow (index, row) {
       console.log(index, row)
       alert('查看：' + row.id + row.name)
     },
-    handleDownload(index, row) {
+    handleDownload (index, row) {
       console.log(index, row)
       alert('下载：' + row.id + row.name)
     },
@@ -95,8 +95,12 @@ export default {
 </script>
 
 <style rel="stylesheet/scss">
-  #help-table-div .el-table td, .el-table th{
+  #table-div .el-table td{
     padding: 15px 0;
+  }
+
+  #table-div .el-table .cell {
+    padding: 0;
   }
 </style>
 
@@ -126,5 +130,4 @@ export default {
   .el-button--mini {
     padding: 0;
   }
-
 </style>

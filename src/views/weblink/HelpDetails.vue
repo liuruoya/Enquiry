@@ -2,7 +2,7 @@
 <template>
   <PageModel :icon-src="icon_help" title-name="帮助详情">
     <el-container>
-      <el-main id="help-title">
+      <el-main id="main-title">
         <el-row class="title">
           {{ helpData.title }}
         </el-row>
@@ -11,12 +11,12 @@
         </el-row>
       </el-main>
     </el-container>
-    <el-container id="help-content">
-      <el-main id="help-main">
+    <el-container id="main-container">
+      <el-main id="main-content">
         <el-row class="content">
           <p>{{helpData.content}}</p>
         </el-row>
-        <el-row class="el-row-download">
+        <el-row class="download">
           <i class="el-icon-link" style=""></i>
           <span type="primary" @click="handleDownload">
                         {{ helpData.name }}
@@ -28,16 +28,16 @@
 </template>
 
 <script>
-import PageModel from '../../components/PageModel'
+import PageModel from '@/components/PagesModel'
 // 测试用数据
-import testdata from '../../../static/data/helpFilm'
+import testdata from '@/../static/data/helpFilm'
 
 export default {
   name: 'HelpDetails',
   components: { PageModel },
   data () {
     return {
-      icon_help: '../../static/img/icon_help.png',
+      icon_help: '@/../static/img/icon_help.png',
       helpData: {}
     }
   },
@@ -54,21 +54,21 @@ export default {
 </script>
 
 <style scoped>
-  #help-title {
+  #main-title {
     text-align: center;
+    margin-top: 10px;
   }
 
-  #help-title .title {
-    margin-top: 20pt;
+  #main-title .title {
     height: 24px;
     font-size: 18px;
     font-family: Microsoft YaHei, Microsoft YaHei-Bold;
     font-weight: 700;
     color: #333333;
-    /*line-height: 24px;*/
+    line-height: 24px;
   }
 
-  #help-title .date {
+  #main-title .date {
     margin-top: 12pt;
     height: 19px;
     font-size: 14px;
@@ -77,14 +77,13 @@ export default {
     color: #666666;
   }
 
-  #help-content {
-    /*margin-top: -35px;*/
+  #main-container {
+    /*margin-top: -15px;*/
   }
 
-  #help-main{
+  #main-content{
     padding: 20px 50px;
     width: 1000px;
-    /*height: 1071px;*/
     font-size: 16px;
     font-family: Microsoft YaHei, Microsoft YaHei-Regular;
     font-weight: 400;
@@ -93,23 +92,20 @@ export default {
     line-height: 30px;
   }
 
-  #help-main .content p{
+  #main-content .content p{
     margin-bottom: 25px;
     margin-top: 0px;
     text-indent:2em;
   }
 
-  #help-main .el-icon-link{
-    /*text-indent:2em;*/
+  #main-content .el-icon-link{
     width: 16px;
     height: 18px;
     color: #0096c3;
     margin-left: 2em;
   }
 
-  #help-main .el-row-download span{
-    /*width: 138px;*/
-    /*height: 19px;*/
+  #main-content .download span{
     border: 1px solid rgba(0,0,0,0);
     font-size: 14px;
     font-family: Microsoft YaHei, Microsoft YaHei-Regular;
